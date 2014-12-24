@@ -26,6 +26,8 @@
 * The issue should then be assigned to the reviewer
 * The reviewer should look at the issue and comment on whether the issue is finished or not
 * The reviewer then assigns the issue back to the initial assignee, and removes the review label
+* Tips
+  * To view all changes of a branch try ```git diff master...gh-3```
 
 ## Lifecycle
 A standard issue has the following lifecycle:
