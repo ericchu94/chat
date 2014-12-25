@@ -5,8 +5,8 @@
 
 ## States
 * Each issues has 2 possible states: open, and closed
-* A issue should be closed only after it is completely done
-* A issue can be reopened if it is not finished
+* An issue should be closed only after it is completely done
+* An issue can be reopened if it is not finished
 
 ## Assignees
 * Each issue can be assigned to at most 1 person
@@ -19,7 +19,7 @@
 
 ## Labels
 * All issues should have 1 label that is not review
-* A issue may also have the review label, when the issue is to be reviewed
+* An issue may also have the review label, when the issue is to be reviewed
 
 ## Reviews
 * When an issue is to be reviewed, the review label should be added
