@@ -33,4 +33,3 @@ The workflow for resolving issues involving the repository is as follows:
     * ```git merge gh-4```
  8. Push the changes to the tracking branch
     * ```git push```
-  
