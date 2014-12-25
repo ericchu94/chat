@@ -7,7 +7,7 @@
 * The ```git clone``` command typically needs to be run only once
 * This command creates a copy of the repository and also adds a remote called origin
   * The remote is used for pulling and pushing
-  
+
 ## Tackling issues
 The workflow for resolving issues involving the repository is as follows:
  1. Create a feature branch to work on the issue
