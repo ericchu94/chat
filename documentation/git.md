@@ -28,7 +28,7 @@ The workflow for resolving issues involving the repository is as follows:
     * ```git push origin gh-7```
  5. Pass the code review
  6. Update the local branches using ```git pull```
- 7. Merge the feature brach into master
+ 7. Merge the feature branch into master
     * ```git checkout master```
     * ```git merge gh-4```
  8. Push the changes to the tracking branch
