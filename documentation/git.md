@@ -9,7 +9,7 @@
   * The remote is used for pulling and pushing
 
 ## Tackling issues
-The workflow for resolving issues involving the repository is as follows:
+The following workflow steps are to be done by the person who is assigned to resolve an issue involving this repository:
  1. Create a feature branch to work on the issue
     * ```git checkout master```
     * ```git checkout -b gh-7```
