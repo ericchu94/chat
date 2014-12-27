@@ -33,3 +33,5 @@ The following workflow steps are to be done by the person who is assigned to res
     * ```git merge gh-4```
  8. Push the changes to the tracking branch
     * ```git push```
+ 9. Delete the remote branch
+    * ```git push origin --delete gh-7```
