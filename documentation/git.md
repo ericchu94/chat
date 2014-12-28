@@ -31,6 +31,7 @@ The following workflow steps are to be done by the person who is assigned to res
  7. Merge the feature branch into master
     * ```git checkout master```
     * ```git merge gh-4```
+    * Resolve merge conflicts if needed
  8. Push the changes to the tracking branch
     * ```git push```
  9. Delete the remote branch
