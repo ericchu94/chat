@@ -47,7 +47,10 @@ The system will be written in node.js using the sails.js framework. Tasks will b
 * No longer one large chat room
 * Chat instances are based on the users who are in them and only chats between two or more contacts can be created
  * Users can be in more than one instance at a time
+ * Multiple chat instances between the same combination of users are not allowed
  * A user can choose a new group of contacts or a single contact to start a new chat instance
+  	* User can directly select a contact to chat one-one-one
+   	* User can also make a new message and select who, from their contacts, to send it to, creating a group chat
  * Users can return to existing chat instances after re-logging in
   * Old messages can be seen, including those sent while user is offline
   * Users can still leave messages if no one that they are chatting with is online
