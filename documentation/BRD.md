@@ -45,15 +45,15 @@ The system will be written in node.js using the sails.js framework. Tasks will b
 
 ### Module 4 - User-based Chatting System
 * No longer one large chat room
-* Chat instances are based on the users who are in them and only chats between two or more contacts can be started
+* Chat instances are based on the users who are in them and only chats between two or more contacts can be created
  * Users can be in more than one instance at a time
+ * A user can choose a new group of contacts or a single contact to start a new chat instance
  * Users can return to existing chat instances after re-logging in
   * Old messages can be seen, including those sent while user is offline
   * Users can still leave messages if no one that they are chatting with is online
- * Chat instances keep one month worth of old messages
+ * Users can leave a group chat at anytime
 
 ### Module 5 - Adding Contacts to existing chat instances
 * A user can add multiple contacts at once to an existing chat instance at any time
- * Newly added users can still see previously sent messages by old users
- * If old users wish to chat alone again, a new blank instance is to be created
- * For example: A and B are chatting, so an instance comprising of them exists. A adds C, so A, B, and C are chatting together and C can see old messages since the instance now includes C as well. A and B wish to chat alone again, then a new instance is created between A and B only. The instance comprising of A, B, and C still exists.
+ * If old instance is already a group chat, newly added users can still see previously sent messages by old users
+ * If old instance is one-on-one, then a new instance will be created
