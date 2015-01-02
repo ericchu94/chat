@@ -26,6 +26,7 @@ The system will be written in node.js using the sails.js framework. Tasks will b
 * Create a single chat room where users can chat with other users in realtime
   * Messages are text only
   * Messages are displayed in chonological order
+  * A timestamp must be displayed for each message
   * Messages are seen by all users, including previous messages
 
 ### Module 2 - Authentication
@@ -47,16 +48,22 @@ The system will be written in node.js using the sails.js framework. Tasks will b
 * No longer one large chat room
 * Chat instances are based on the users who are in them and only chats between two or more contacts can be created
  * Users can be in more than one instance at a time
- * Multiple chat instances between the same combination of users are not allowed
+ * If a chat instance exists between a combination of users, a new instance of the same combination cannot be created
+   * Note: Existing instances can be modified to end up with the same combination of users as another existing instance
+    * Example: A, B, C, and D are chatting in instance *one*, another instance with exactly A, B, C, and D cannot be created. If A, B, and C creates a new chat instance, *two*, and then D leaves instance *one*, instances *one* and *two* would still both exist.
  * A user can choose a new group of contacts or a single contact to start a new chat instance
   	* User can directly select a contact to chat one-one-one
-   	* User can also make a new message and select who, from their contacts, to send it to, creating a group chat
- * Users can return to existing chat instances after re-logging in
-  * Old messages can be seen, including those sent while user is offline
-  * Users can still leave messages if no one that they are chatting with is online
- * Users can leave a group chat at anytime
+   	* User can also first create a group chat, then select the participants from their contact list, then send messages to all of them. All messages sent by each participant in this group chat can be seen by every other participant.
+* Users can return to existing chat instances after re-logging in
+* Old messages can be seen, including those sent while user is offline
+ * Users can still leave messages if no one that they are chatting with is online
+* Users can leave a group chat at anytime
+* The user who creates a group chat can name and rename the group chat instance.
+ * Note: Only applies to group chat instances. One-on-one chats will just display the username of the other person the user is chatting with.
 
 ### Module 5 - Adding Contacts to existing chat instances
 * A user can add multiple contacts at once to an existing chat instance at any time
  * If old instance is already a group chat, newly added users can still see previously sent messages by old users
  * If old instance is one-on-one, then a new instance will be created
+ * Note: Just as in module 4, existing instances can be modified to end up with the same combination of users as another existing instance
+ * Example: A, B, and C are chatting in instance *one*, another instance with exactly A, B, and C cannot be created. If A, B, C, and D creates a new chat instance, *two*, and then D is added to instance *one*, instances *one* and *two* would still both exist.
