@@ -47,6 +47,11 @@ The system will be written in node.js using the sails.js framework. Tasks will b
 ### Module 4 - User-based Chatting System
 * No longer one large chat room
 * Chat instances are based on the users who are in them and only chats between two or more contacts can be created
+ * Each chat instance can be one of two types: group or one-on-one
+   * Chat instances cannot change from one to another
+    * Chat instances with only two participants upon creation are one-on-one
+    * Chat instances with three or more participants upon creation are group chats
+      * Even if participants leave and the chat ends up with two or less participants, the instance is still considered a group chat
  * Users can be in more than one instance at a time
  * If a chat instance exists between a combination of users, a new instance of the same combination cannot be created
    * Note: Existing instances can be modified to end up with the same combination of users as another existing instance
@@ -54,10 +59,15 @@ The system will be written in node.js using the sails.js framework. Tasks will b
  * A user can choose a new group of contacts or a single contact to start a new chat instance
   	* User can directly select a contact to chat one-one-one
    	* User can also first create a group chat, then select the participants from their contact list, then send messages to all of them. All messages sent by each participant in this group chat can be seen by every other participant.
+   	  * If user selected only one contact, then either the existing one-on-one chat is opened (if it exists) or a new one-on-one chat is created.
+   	  * If user selected a group that already has one or more existing group chat instances, then the most recent one is to be opened.
 * Users can return to existing chat instances after re-logging in
+  * There needs to be way for them to browse existing instances they are already chatting in
 * Old messages can be seen, including those sent while user is offline
  * Users can still leave messages if no one that they are chatting with is online
 * Users can leave a group chat at anytime
+  * The rest of the participants can still chat.
+  * If everyone leaves and the group chat has no participants, then it will be removed
 * The user who creates a group chat can name and rename the group chat instance.
  * Note: Only applies to group chat instances. One-on-one chats will just display the username of the other person the user is chatting with.
 
