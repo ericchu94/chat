@@ -52,13 +52,15 @@ The system will be written in node.js using the sails.js framework. Tasks will b
     * Chat instances with only two participants upon creation are one-on-one
     * Chat instances with three or more participants upon creation are group chats
       * Even if participants leave and the chat ends up with two participants, the instance is still considered a group chat
+      * All messages sent by each participant in this group chat can be seen by every other participant.
+      * Each participant can review the history of the group chat if they did not leave
  * Users can be in more than one instance at a time
  * If a chat instance exists between a combination of users, a new instance of the same combination cannot be created
    * Note: Existing instances can be modified to end up with the same combination of users as another existing instance
     * Example: A, B, C, and D are chatting in instance *one*, another instance with exactly A, B, C, and D cannot be created. If A, B, and C creates a new chat instance, *two*, and then D leaves instance *one*, instances *one* and *two* would still both exist.
  * A user can choose a new group of contacts or a single contact to start a new chat instance
   	* User can directly select a contact to chat one-one-one
-   	* User can also first create a group chat, then select the participants from their contact list, then send messages to all of them. All messages sent by each participant in this group chat can be seen by every other participant.
+   	* User can also first create a group chat, then select the participants from their contact list, then send messages to all of them. 
    	  * If user selected only one contact, then either the existing one-on-one chat is opened (if it exists) or a new one-on-one chat is created.
    	  * If user selected a group that already has one or more existing group chat instances, then the most recent one is to be opened.
 * Users can return to existing chat instances after re-logging in
