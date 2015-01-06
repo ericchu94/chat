@@ -69,7 +69,8 @@ The system will be written in node.js using the sails.js framework. Tasks will b
  * Users can still leave messages if no one that they are chatting with is online
 * Users can leave a group chat at anytime
   * The rest of the participants can still chat.
-  * If the number of participants reach one, then it will be removed
+  * If the number of participants reach one, then that last participant will not be able to send any more messages, but they can still view the chat history
+  * If all participants leave the group chat, then the group chat instance wll be removed
 * The user who creates a group chat can name and rename the group chat instance.
  * Note: Only applies to group chat instances. One-on-one chats will just display the username of the other person the user is chatting with.
 
