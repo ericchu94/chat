@@ -51,7 +51,7 @@ The system will be written in node.js using the sails.js framework. Tasks will b
    * Chat instances cannot change from one to another
     * Chat instances with only two participants upon creation are one-on-one
     * Chat instances with three or more participants upon creation are group chats
-      * Even if participants leave and the chat ends up with two or less participants, the instance is still considered a group chat
+      * Even if participants leave and the chat ends up with two participants, the instance is still considered a group chat
  * Users can be in more than one instance at a time
  * If a chat instance exists between a combination of users, a new instance of the same combination cannot be created
    * Note: Existing instances can be modified to end up with the same combination of users as another existing instance
@@ -67,7 +67,7 @@ The system will be written in node.js using the sails.js framework. Tasks will b
  * Users can still leave messages if no one that they are chatting with is online
 * Users can leave a group chat at anytime
   * The rest of the participants can still chat.
-  * If everyone leaves and the group chat has no participants, then it will be removed
+  * If the number of participants reach one, then it will be removed
 * The user who creates a group chat can name and rename the group chat instance.
  * Note: Only applies to group chat instances. One-on-one chats will just display the username of the other person the user is chatting with.
 
