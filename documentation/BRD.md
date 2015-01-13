@@ -31,11 +31,15 @@ The system will be written in node.js using the sails.js framework. Tasks will b
 
 ### Module 2 - Authentication
 * Users are required to sign up with username, password and email
+  * usernames must be unique
+  * emails must be unique
   * Option to change Username
+    * Username can only be changed once every 4 months (3 times a year), counting begins upon account creation
   * Option to change Password
   * Option to change email
 * Users are required to log in with said username and password to join chat room
   * Allow "remember me" for quick sign in
+* Username preface every message to indicate who sent the text
 
 ### Module 3 - Contact lists 
 * Users will each have a contact list
@@ -69,14 +73,16 @@ The system will be written in node.js using the sails.js framework. Tasks will b
  * Users can still leave messages if no one that they are chatting with is online
 * Users can leave a group chat at anytime
   * The rest of the participants can still chat.
-  * If the number of participants reach one, then that last participant will not be able to send any more messages, but they can still view the chat history
+  * A user can still review the group chat history up until the point of when they leave after they leave
+    * If the number of participants reach one, then that last participant will not be able to send any more messages, but they can still view the chat history
   * If all participants leave the group chat, then the group chat instance wll be removed
 * The user who creates a group chat can name and rename the group chat instance.
  * Note: Only applies to group chat instances. One-on-one chats will just display the username of the other person the user is chatting with.
 
-### Module 5 - Adding Contacts to existing chat instances
+### Module 5 - Adding/removing participants to existing chat instances
 * A user can add multiple contacts at once to an existing chat instance at any time
  * If old instance is already a group chat, newly added users can still see previously sent messages by old users
- * If old instance is one-on-one, then a new instance will be created
+ * If old instance is one-on-one, then a new instance will be created and the user who added the new participant is considered the creator of the group chat
  * Note: Just as in module 4, existing instances can be modified to end up with the same combination of users as another existing instance
  * Example: A, B, and C are chatting in instance *one*, another instance with exactly A, B, and C cannot be created. If A, B, C, and D creates a new chat instance, *two*, and then D is added to instance *one*, instances *one* and *two* would still both exist.
+ * The group chat creator can remove participants from a group at any time
