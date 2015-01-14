@@ -32,16 +32,16 @@ The system will be written in node.js using the sails.js framework. Tasks will b
 ### Module 2 - Authentication
 * Users are required to sign up with username, password and email
   * usernames must be unique
-    * If users input a taken username, a popup message will tell them so
+    * If users input a taken username, a message will tell them so
   * emails must be unique
-    * If users input a taken email, a popup message will tell them so
+    * If users input a taken email, a message will tell them so
   * Option to change Username
     * Username can only be changed once every 4 months (3 times a year), counting begins upon account creation
-    * If users try to change their username while they are not allowed, a popup message will tell them how much longer they need to wait before they are allowed to change their username again.
+    * If users try to change their username while they are not allowed, a message will tell them how much longer they need to wait before they are allowed to change their username again.
   * Option to change Password
-    * If users input a taken password, a popup message will tell them so
+    * If users input a taken password, a message will tell them so
   * Option to change email
-    * If users input a taken email, a popup message will tell them so
+    * If users input a taken email, a message will tell them so
 * Users are required to log in with said username and password to join chat room
   * Allow "remember me" for quick sign in
 * Username preface every message to indicate who sent the text
@@ -77,8 +77,8 @@ The system will be written in node.js using the sails.js framework. Tasks will b
 * Old messages can be seen, including those sent while user is offline
  * Users can still leave messages if no one that they are chatting with is online
 * Users can leave a group chat at anytime
-  * The rest of the participants can still chat and will see a system text saying "X has left the group chat."
-  * If users leave, a popup message will show up stating that they have left the group chat
+  * The rest of the participants can still chat and will see indication saying "X has left the group chat."
+  * If users leave, a message will show up stating that they have left the group chat
   * A user can still review the group chat history up until the point of when they leave after they leave
     * If the number of participants reach one, then that last participant will not be able to send any more messages, but they can still view the chat history
   * If all participants leave the group chat, then the group chat instance wll be removed
@@ -92,5 +92,5 @@ The system will be written in node.js using the sails.js framework. Tasks will b
  * Note: Just as in module 4, existing instances can be modified to end up with the same combination of users as another existing instance
  * Example: A, B, and C are chatting in instance *one*, another instance with exactly A, B, and C cannot be created. If A, B, C, and D creates a new chat instance, *two*, and then D is added to instance *one*, instances *one* and *two* would still both exist.
  * The group chat creator can remove participants from a group at any time
-   * The removed particiant will see a popup message stating they have been removed
-    * All other participants will see a system text in their chat saying "X has been removed from the group chat."
+   * The removed particiant will see a message stating they have been removed
+    * All other participants will see indication saying "X has been removed from the group chat."
