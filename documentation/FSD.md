@@ -9,7 +9,7 @@
 ## Introduction
 
 ### Purpose
-Outline the functional specifications for the project based on the requirements outlined in the Business Requirement Document (BRD).
+Outline the functional specifications for the project based on the requirements outlined in the Business Requirement Document (abbreviated as BRD hereafter).
 
 ### What are modules used in this document
 Modules in this document refer to the modules described in the BRD and address the functional specification for the system with respect to that module.
