@@ -14,13 +14,16 @@ The purpose of this document is to outline the functional specifications for the
 ### What are modules used in this document
 Modules in this document refer to the modules described in the BRD and address the functional specification for the system with respect to that module.
 
+### User Interface Description
+A high level description outlining the user interface following the functional specifications for the corresponding module.
+
 ## Modules
 ### Module 1 - Initiation
 1. The system shall allow the users to create a chat room in realtime with contacts in contact list (as defined in Module 3 in BRD).
 2. The system shall associate each message with a timestamp at the time the message is sent in terms of the server time.
 3. The system shall store the prior messages (parts of chat history) in most recent first ordering within the chat room is chornological order following the timestamp of the message given under the second point.
 
-	#### System Interface Description
+	#### User Interface Description
 	* The window will be split into two portions. First half is for displaying the prior messages and the other half has a textbox where it allows the users to enter text only messages and a button where it allows the user to send the messages entered in the textbox
 		* The users can also hit the Enter/Return key to send the message
 	* The timestamp for each message is displayed with it's corresponding message in 24-hour time
@@ -29,8 +32,7 @@ Modules in this document refer to the modules described in the BRD and address t
 1. The system shall allow the users to log-in to the system.
 2. The system shall allow the users to sign-up for the system.
 
-	#### System Interface Description
-
+	#### User Interface Description
 	* The user will first arrive at a log-in page where there are two textboxes and two buttons.
 	* The first textbox allows the user to enter their registered username and the second textbox allows the user to enter the corresponding password.
 	* The first button, says "Submit", will validate the supplied credentials by the user against the system's database.
