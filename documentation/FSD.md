@@ -42,3 +42,13 @@ A high level description outlining the user interface following the functional s
 		*  Textbox: each textbox is for the user to enter their desired username, password and display name
 		*  Button: allows the user to submit information
 	*  Note: During each phase the user has to fill-in all the textboxes before they can click the submit button.
+
+### Module 3 - Contact List
+1. The system shall have a window that displays each user's contacts
+
+	#### User Interface Description
+	* A list that displays all the contact and their online online status (colour indication)
+	* A dropdown menu beside each contact to perform additional functions such as start chat, add to faviourite or remove
+	* A button that add users by their username
+	* A dropdown menu of status to choose from to indicate your online status
+	* A separate list that displays a list of contacts indicated by the user as their faviourites 
