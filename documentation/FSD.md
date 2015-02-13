@@ -52,4 +52,21 @@ A high level description outlining the user interface following the functional s
 	* A dropdown menu beside each contact to perform additional functions such as start chat, add to faviourite or remove
 	* A button that add users by their username
 	* A dropdown menu of status to choose from to indicate your online status
-	* A separate list that displays a list of contacts indicated by the user as their faviourites 
+	* A separate list that displays a list of contacts indicated by the user as their faviourites
+
+### Module 4 - User-based Chatting System
+1. The system shall only create a chat room if there are two or more users for the chat room
+2. The system shall allow users to belong in more than one chat rooms simultaneously
+3. The system shall not allow a new chat room to be created if the chat room with the same users already existed
+4. The system shall allow any user to initiate a chat room with one (one-to-one chat room) or more users (group chat room) without violating the third point under Module 4
+5. The system shall allow all the participants in a chat room to view the history of the chat
+6. The system shall preserve all the chat instances that a user belongs and allow them to return to those chat rooms after they re-log into the system
+7. The system shall allow any user who belongs in a chat room to leave at anytime
+8. The system shall allow the user who left the chat to be able to view the chat history to the point that they left the chat room
+9. The system shall allow the users to rename any chat instance that they belong to
+
+	#### User Interface Description
+	* Right Click On anyone or the group the user has in their contact list:
+		* Initiate (create) chat room
+		* Remove User
+			* When this action is performed in a group then the user will proceed to select which user(s) to remove from that particular group
