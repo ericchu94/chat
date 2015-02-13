@@ -74,3 +74,10 @@ When referencing document in this document only those referencing BRD will be ex
 		* Initiate (create) chat room
 		* Remove User
 			* When this action is performed in a group then the user will proceed to select which user(s) to remove from that particular group
+
+### Module 5 - Adding/Removing participant to existing chat instances
+1. The system shall allow anyone who participates in a chat room to add any other user who is not already participating in the same chat room on their contact list to join the chat room
+
+	a.  If the chat room is one-on-one then the person who invites the new user will become the creator to that chat room
+2. The system shall allow the creator of a group chat to remove any user within the group chat without being restricted by Module 4 third point
+3. The system shall allow the user to add user to their group chat without being restricted by Module 4 third point
