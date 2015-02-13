@@ -31,6 +31,7 @@ When referencing document in this document only those referencing BRD will be ex
 		* The users can also hit the Enter/Return key to send the message
 	* The timestamp for each message is displayed with it's corresponding message in 24-hour time
 	* There will be a button that allows the user to click in order to leave the chat room
+		* When this button is clicked it will show a list of users that can added to the chat room
 
 ### Module 2 - Authentication
 1. The system shall allow the users to log-in to the system.
