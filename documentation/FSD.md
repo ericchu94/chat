@@ -9,13 +9,16 @@
 ## Introduction
 
 ### Purpose
-The purpose of this document is to outline the functional specifications for the project based on the requirements outlined in the Business Requirement Document (abbreviated as BRD hereafter) under modules.
+The purpose of this document, Functional Specification Document (abbreviated as FSD hereafter), is to outline the functional specifications for the project based on the requirements outlined in the Business Requirement Document (abbreviated as BRD hereafter) under modules.
 
 ### What are modules used in this document
 Modules in this document refer to the modules described in the BRD and address the functional specification for the system with respect to that module.
 
 ### User Interface Description
 A high level description outlining the user interface following the functional specifications for the corresponding module.
+
+### Document Reference
+When referencing document in this document only those referencing BRD will be explicitly stated.
 
 ## Modules
 ### Module 1 - Initiation
