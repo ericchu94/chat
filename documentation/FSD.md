@@ -27,6 +27,7 @@ A high level description outlining the user interface following the functional s
 	* The window will be split into two portions. First half is for displaying the prior messages and the other half has a textbox where it allows the users to enter text only messages and a button where it allows the user to send the messages entered in the textbox
 		* The users can also hit the Enter/Return key to send the message
 	* The timestamp for each message is displayed with it's corresponding message in 24-hour time
+	* There will be a button that allows the user to click in order to leave the chat room
 
 ### Module 2 - Authentication
 1. The system shall allow the users to log-in to the system.
