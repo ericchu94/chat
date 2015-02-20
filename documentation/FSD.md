@@ -11,7 +11,7 @@
 ### Purpose
 The purpose of this document, Functional Specification Document (abbreviated as FSD hereafter), is to outline the functional specifications for the project based on the requirements outlined in the Business Requirement Document (abbreviated as BRD hereafter) under modules.
 
-### What are modules used in this document
+### Module References
 Modules in this document refer to the modules described in the BRD and address the functional specification for the system with respect to that module.
 
 ### User Interface Description
@@ -24,7 +24,7 @@ When referencing document in this document only those referencing BRD will be ex
 ### Module 1 - Initiation
 1. The system shall allow the users to create a chat room in realtime with contacts in contact list (as defined in Module 3 in BRD).
 2. The system shall associate each message with a timestamp at the time the message is sent in terms of the server time.
-3. The system shall store the prior messages (parts of chat history) in most recent first ordering within the chat room is chornological order following the timestamp of the message given under the second point.
+3. The system shall store the prior messages (parts of chat history) in most recent first ordering within the chat room is chronological order following the timestamp of the message given under the second point.
 
 	#### User Interface Description
 	* The window will be split into two portions. First half is for displaying the prior messages and the other half has a textbox where it allows the users to enter text only messages and a button where it allows the user to send the messages entered in the textbox
@@ -53,10 +53,10 @@ When referencing document in this document only those referencing BRD will be ex
 
 	#### User Interface Description
 	* A list that displays all the contact and their online online status (colour indication)
-	* A dropdown menu beside each contact to perform additional functions such as start chat, add to faviourite or remove
+	* A dropdown menu beside each contact to perform additional functions such as start chat, add to favorite or remove
 	* A button that add users by their username
 	* A dropdown menu of status to choose from to indicate your online status
-	* A separate list that displays a list of contacts indicated by the user as their faviourites
+	* A separate list that displays a list of contacts indicated by the user as their favorite
 
 ### Module 4 - User-based Chatting System
 1. The system shall only create a chat room if there are two or more users for the chat room
