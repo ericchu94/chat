@@ -17,21 +17,27 @@ Modules in this document refer to the modules described in the BRD and address t
 ### User Interface Description
 A high level description outlining the user interface following the functional specifications for the corresponding module.
 
-### Document Reference
-When referencing document in this document only those referencing BRD will be explicitly stated.
+### Data Format
+All data transmitted between the client and server through the websocket is in JSON unless otherwise specified.
 
 ## Modules
 ### Module 1 - Initiation
-1. The system shall allow the users to create a chat room in realtime with contacts in contact list (as defined in Module 3 in BRD).
-2. The system shall associate each message with a timestamp at the time the message is sent in terms of the server time.
-3. The system shall store the prior messages (parts of chat history) in most recent first ordering within the chat room is chronological order following the timestamp of the message given under the second point.
+#### User Interface Description
+* Display messages view
+  * This view needs to be populated with the latest 10 messages, with a control at the top to load previous messages, and scrolled to bottom initially
+* Type message control
+* Submit message control
 
-	#### User Interface Description
-	* The window will be split into two portions. First half is for displaying the prior messages and the other half has a textbox where it allows the users to enter text only messages and a button where it allows the user to send the messages entered in the textbox
-		* The users can also hit the Enter/Return key to send the message
-	* The timestamp for each message is displayed with it's corresponding message in 24-hour time
-	* There will be a button that allows the user to click in order to leave the chat room
-		* When this button is clicked it will show a list of users that can added to the chat room
+#### Events
+* If and only if there is only white space in the message control, disable the submit control
+* When Enter is pressed in the message control, simulate a click on submit control
+* When the submit control is clicked, and if there is not only white space in the message control, and if there is not already a message post in progress, send the text in the message control to the server using a websocket post
+* When the server responds from a message post, and if there is no error, focus and clear the message text
+* When the server receives a message via post, and if the message text is not only white space, attach a timestamp (milliseconds since unix epoch) to the message, broadcast it to all connected websockets, and respond to the post indicating success
+* When the client receives a message from the websocket, display it in the messages view, and if the messages view was originally scrolled to the bottom, scroll to the bottom again
+* When the previous messages control is clicked, disable the control, and send a websocket get with the timestamp of the first message
+* When the server receives a load previous messages request via get, send (up to) 10 messages most recently prior to the timestamp to the client
+* When the client receives the previous messages, enable the previous messages control, and display the messages in the messages view
 
 ### Module 2 - Authentication
 1. The system shall allow the users to log-in to the system.
