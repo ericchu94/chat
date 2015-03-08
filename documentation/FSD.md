@@ -40,19 +40,61 @@ All data transmitted between the client and server through the websocket is in J
 * When the client receives the previous messages, enable the previous messages control, and display the messages in the messages view
 
 ### Module 2 - Authentication
-1. The system shall allow the users to log-in to the system.
-2. The system shall allow the users to sign-up for the system.
+#### User Interface Description
+* Display messages view
+  * Messages include a username control
+* Sign Up view
+  * Email control
+  * Password control
+  * Confirm password control
+  * Username control
+  * Output message control
+  * Submit control
+* User management view
+  * Change email control
+  * Change password control
+  * Confirm change password control
+  * Change username control
+  * Output message control
+  * Submit control
+* Login view
+  * Email control
+  * Password control
+  * Remember me control
+  * Output message control
+  * Submit control
 
-	#### User Interface Description
-	* The user will first arrive at a log-in page where there are two textboxes and two buttons.
-	* The first textbox allows the user to enter their registered username and the second textbox allows the user to enter the corresponding password.
-	* The first button, says "Submit", will validate the supplied credentials by the user against the system's database.
-	* The second button, says "Sign Up", will redirect the user to the sign-up page where it allows the user to sign up for the system
-	* The sign-up page consists of 3 lines of texts, 3 textboxes and 1 button:
-		*  Text: username, password, display name
-		*  Textbox: each textbox is for the user to enter their desired username, password and display name
-		*  Button: allows the user to submit information
-	*  Note: During each phase the user has to fill-in all the textboxes before they can click the submit button.
+#### Events
+##### Chat room
+* When loading the chat room, show login view if user is not logged in
+* When the server receives a message via post, and if the message text is not only white space, attach a timestamp (milliseconds since unix epoch) to the message, attach the username associated with the message, broadcast it to all connected websockets, and respond to the post indicating success
+
+##### Sign up
+* Pressing Enter in any input control in the sign up view will change focus to the next input control, unless the control is a submit control
+  * If the next control is a submit control, simulate a click on the control
+* If and only if any fields are empty in the sign up view, disable the submit control
+* When the Sign up view's submit control is clicked, if it is active, and a sign up request is not already in progress, validate that password and confirm password is the same, and if not, display an error message
+  * If the passwords are the same, send a sign up request via websocket post
+* When the server receives a sign up request, validate that the username and email fields are unique, and if not, respond with an error message
+  * If the validation is successful, create the user, and log in, and respond indicating success
+* When the client receives the response to the sign up request, display the error message if unsuccessful, otherwise, show the chat room
+
+##### User management
+* Pressing Enter in any input control in the user management view will change focus to the next input control, unless the control is a submit control
+  * If the next control is a submit control, simulate a click on the control
+* When the User management view's submit control is clicked, and an user update request is not already in progress, validate that password and confirm password is the same, and if not, display an error message
+  * If the passwords are the same, send a user update request updating all non-blank fields
+* When the server receives a user update request, validate that the username and email fields are unique, and if not, respond with an error message
+  * If the validation is successful, update the fields, and respond indicating success
+* When the client receives the response to the sign up request, display the error message if unsuccessful, otherwise, display a success message
+
+##### Login
+* Pressing Enter in any input control in the login view will change focus to the next input control, unless the control is a submit control
+* If and only if any fields are empty in the login view, disable the submit control
+* When the Login view's submit control is clicked, if it is active, and a log in request is not already in progress, send a log in request via websocket post
+* When the server receives a sign up request, validate that the email and password fields correspond to a user, and if not, respond with an error message
+  * If the validation is successful, log in and set session expiration time, and respond indicating success
+* When the client receives the response to the log in request, display the error message if unsuccessful, otherwise, show the chat room
 
 ### Module 3 - Contact List
 1. The system shall have a window that displays each user's contacts
