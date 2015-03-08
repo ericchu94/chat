@@ -39,7 +39,7 @@ The system will be written in node.js using the sails.js framework. Tasks will b
     * Username can only be changed once every 4 months (3 times a year), counting begins upon account creation
     * If users try to change their username while they are not allowed, a message will tell them how much longer they need to wait before they are allowed to change their username again.
   * Option to change Password
-    * If users input the old (current) password, a message will tell them so
+    * If users input a taken password, a message will tell them so
   * Option to change email
     * If users input a taken email, a message will tell them so
 * Users are required to log in with said username and password to join chat room
