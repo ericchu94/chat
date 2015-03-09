@@ -43,9 +43,6 @@ The system will be written in node.js using the sails.js framework. Tasks will b
     * If users input a taken email, a message will tell them so
 * Users are required to log in with said username and password to join chat room
   * Allow "remember me" for quick sign in
-  * log in page will also have a "Forgot Password" button that will send a password reset link to an inputted email
-    * If inputted email is not registered, a message will tell them so 
-    * If reset email was successfully sent, a message will tell them so
 * Username preface every message to indicate who sent the text
 
 ### Module 3 - Contact lists 
@@ -96,3 +93,8 @@ The system will be written in node.js using the sails.js framework. Tasks will b
  * The group chat creator can remove participants from a group at any time
    * The removed particiant will see a message stating they have been removed
     * All other participants will see indication saying "X has been removed from the group chat."
+
+### Module 6 - Features and Upgrades
+* Add "Forgot Password" button onto login page that will send a password reset link to an inputted email
+    * If inputted email is not registered, a message will tell them so 
+    * If reset email was successfully sent, a message will tell them so
