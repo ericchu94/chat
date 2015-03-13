@@ -97,14 +97,44 @@ All data transmitted between the client and server through the websocket is in J
 * When the client receives the response to the log in request, display the error message if unsuccessful, otherwise, show the chat room
 
 ### Module 3 - Contact List
-1. The system shall have a window that displays each user's contacts
+#### User Interface Description
+* Status control
+  * Online
+  * Offline
+  * Away
+  * Busy
+* Add contact control
+* Output message control
+* Contact list view
+  * Favorites list view
+    * Populated with favorited contacts
+    * Contact list item view
+  * Normal contacts list view
+    * Populated with all contacts
+    * Contact list item view
+  * Contact list item view
+    * Status control
+    * Name control
+    * Contact context menu control
+      * Add/remove favorite control
+      * Add/remove contact control
 
-	#### User Interface Description
-	* A list that displays all the contact and their online online status (colour indication)
-	* A dropdown menu beside each contact to perform additional functions such as start chat, add to favorite or remove
-	* A button that add users by their username
-	* A dropdown menu of status to choose from to indicate your online status
-	* A separate list that displays a list of contacts indicated by the user as their favorite
+#### Events
+* When a user logs in, broadcast the user's status to all users that have the user in contacts
+* When a user logs out, broadcast the user's status as offline to all users that have the user in contacts
+* When a user changes status, broadcast the user's status to all users that have the user in contacts
+* Pressing any key in the add contact control clears the output message
+* Pressing enter in the add contact control, and if the control is not all whitespace, sends an add contact request via websocket post
+* When the server receives an add contact request, validate that the user exists, and that the contact is not already added, and if not, respond with an error
+  * If successful, add the contact and respond indicating success with contact status
+* When the client receives an add contact response, if success, clear the add contact control, add the new contact with status, focus the new contact, and output a success message
+  * If failed, output the error
+* When a contact or an user is right-clicked on, display the custom context menu
+  * The favorite control depends on whether the user is already favorited
+  * The contact control depends on whether the contact is already added
+* When the context menu's action control is clicked, send the respective request using a user's id (instead of username) via websocket post, and close the context menu
+* when the server receives a remove contact request, validate that the contact exists and is in the contact list, remove the contact, and send a message indicating success or failure
+* When the server receives a add/remove favorite request, validate that the contact exists and is in the contact list, add/remove the favorite, and send a message indicating success or failure
 
 ### Module 4 - User-based Chatting System
 1. The system shall only create a chat room if there are two or more users for the chat room
